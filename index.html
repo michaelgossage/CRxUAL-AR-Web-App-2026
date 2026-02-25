@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>MindAR Vite Multi Target</title>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="/CRxUAL-AR-Web-App-2026/assets/index-DtBQqBPB.js"></script>
+    <link rel="stylesheet" crossorigin href="/CRxUAL-AR-Web-App-2026/assets/index-D5S3jBOk.css">
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="touch"></div>
+
+    <div id="hud">
+      <b>MindAR — Multi Target</b><br />
+      <span id="status" class="pill warn">waiting…</span><br />
+      Drag <b>horizontally</b> to spin • Drag <b>vertically</b> on text to scroll • Tap <b>X</b> to close
+    </div>
+
+    <div id="startOverlay">
+      <div class="card">
+        <h1>Start AR</h1>
+        <p>
+          Allow camera access. Point at a target image to reveal content.
+          Targets are mapped by index inside the same <code>.mind</code> file.
+        </p>
+        <button id="startBtn">Tap to start</button>
+      </div>
+    </div>
+
+  </body>
+</html>
