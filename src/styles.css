@@ -1,0 +1,54 @@
+html, body { margin:0; height:100%; background:#000; overflow:hidden; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+#container { position:fixed; inset:0; }
+#hud {
+  position: fixed; left: 12px; top: 12px; z-index: 10;
+  color: rgba(255,255,255,0.9); font-size: 12px; line-height: 1.35;
+  padding: 10px 12px; border-radius: 12px;
+  background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(8px);
+  max-width: 440px;
+  user-select: none;
+}
+#hud b { font-weight: 700; }
+#hud .pill { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid rgba(255,255,255,0.18); margin-top:6px; }
+#hud .ok { color: #b8ffcf; }
+#hud .warn { color: #ffd6a8; }
+
+#touch { position: fixed; inset: 0; z-index: 5; touch-action: none; }
+
+#startOverlay {
+  position: fixed; inset: 0; z-index: 20;
+  display: grid; place-items: center;
+  background: radial-gradient(1200px 800px at 50% 30%, rgba(255,255,255,0.10), rgba(0,0,0,0.95));
+  color: rgba(255,255,255,0.95);
+}
+#startOverlay .card {
+  width: min(520px, calc(100vw - 32px));
+  padding: 18px 18px 16px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.6);
+}
+#startOverlay h1 { margin: 0 0 8px; font-size: 16px; letter-spacing: 0.2px; }
+#startOverlay p { margin: 0 0 12px; font-size: 13px; color: rgba(255,255,255,0.78); }
+#startOverlay button {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.92);
+  font-weight: 650;
+  cursor: pointer;
+}
+#startOverlay button:active { transform: translateY(1px); }
+
+/* Keep view clean (MindAR UI overlays) */
+.mindar-ui-overlay,
+.mindar-ui-scanning,
+.mindar-ui-loading,
+.mindar-ui-error {
+  display: none !important;
+}

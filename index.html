@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>MindAR Vite Multi Target</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="touch"></div>
+
+    <div id="hud">
+      <b>MindAR — Multi Target</b><br />
+      <span id="status" class="pill warn">waiting…</span><br />
+      Drag <b>horizontally</b> to spin • Drag <b>vertically</b> on text to scroll • Tap <b>X</b> to close
+    </div>
+
+    <div id="startOverlay">
+      <div class="card">
+        <h1>Start AR</h1>
+        <p>
+          Allow camera access. Point at a target image to reveal content.
+          Targets are mapped by index inside the same <code>.mind</code> file.
+        </p>
+        <button id="startBtn">Tap to start</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
