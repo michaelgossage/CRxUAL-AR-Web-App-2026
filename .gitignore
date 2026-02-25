@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+
+# vite cache
+node_modules/.cache/
+.vite/
+
+# build output
+dist/
+
+# system
+.DS_Store
