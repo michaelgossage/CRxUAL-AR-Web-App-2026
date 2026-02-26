@@ -15,16 +15,18 @@ export function setupCarouselText({
   const FREE_FILL = 0.92;
   const FREE_BOB_AMPL = 0.012;
   const FREE_BOB_SPEED = 1.2;
-  const FREE_OFFSET = new THREE.Vector3(0.0, 0.0, -40.0);
-  const REVEAL_DURATION_S = 0.70;
+  const FREE_OFFSET = new THREE.Vector3(0.0, 0.0, -30.0);
+  const REVEAL_DURATION_S = 2.70;
 
   const PANEL_W = 0.78;
-  const PANEL_H = 0.52;
+  const PANEL_H = 0.78;
 
   const CAROUSEL_RADIUS = 0.34;
   const CAROUSEL_Y = 0.20;
+  const CAROUSEL_Z = 0.5;
   const CAROUSEL_ITEM_W = 0.28;
   const CAROUSEL_ITEM_H = 0.18;
+  const CAROUSEL_OFFSET = new THREE.Vector3(0.0, 0.0, 0.0); // x,y,z in panel space
 
   const TEXT_Y = -0.10;
   const TEXT_W = 0.62;
@@ -33,7 +35,7 @@ export function setupCarouselText({
   const CLOSE_SIZE = 0.085;
   const CLOSE_PAD = 0.02;
 
-  const DRAG_TO_ROT = 0.0075;
+  const DRAG_TO_ROT = 0.005;
   const ROT_FRICTION = 0.93;
   const ROT_SPRING = 0.11;
   const TEXT_SCROLL_SPEED = 1.25;
@@ -301,7 +303,8 @@ export function setupCarouselText({
     pickables.push(closeMesh);
 
     carouselGroup = new THREE.Group();
-    carouselGroup.position.set(0, CAROUSEL_Y, 0.01);
+    carouselGroup.position.set(0, CAROUSEL_Y, CAROUSEL_Z);
+    carouselGroup.add(CAROUSEL_OFFSET);
     root.add(carouselGroup);
 
     const textures = [];
